@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2</title>
+</head>
+
+<body>
+
+    <label>number 1:</label>
+    <input id="numb1">
+    <br>
+    <label>number 2:</label>
+    <input id="numb2">
+    <br>
+    <button onclick="startWorker()">add</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    <p>Count numbers: <output id="result"></output></p>
+
+    <script>
+        let w;
+
+        function startWorker() {
+            if (typeof (Worker) !== "undefined") {
+                if (typeof (w) == "undefined") {
+                    w = new Worker("workers.js");
+                }
+                let numb1 = parseInt(document.getElementById("numb1").value);
+                let numb2 = parseInt(document.getElementById("numb2").value);
+                let data = [numb1, numb2];
+                w.postMessage(data);
+                w.onmessage = function (event) {
+                    document.getElementById("result").innerHTML = event.data;
+                };
+            } else {
+                document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+            }
+        }
+
+        function stopWorker() {
+            w.terminate();
+            w = undefined;
+        }
+    </script>
+</body>
+
+</html>

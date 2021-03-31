@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuan 2</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+    }
+</style>
+
+<body>
+
+    <script>
+        function clickSubmit() {
+            if (typeof (Storage) !== "undefined") {
+                let MSP = document.getElementById("MSP").value;
+                let TSP = document.getElementById("TSP").value;
+                let SL = document.getElementById("SL").value;
+                let Gia = document.getElementById("Gia").value;
+
+                sessionStorage.setItem("MSP", MSP);
+                sessionStorage.setItem("TSP", TSP);
+                sessionStorage.setItem("SL", SL);
+                sessionStorage.setItem("Gia", Gia);
+
+                let t1 = sessionStorage.getItem("MSP");
+                let t2 = sessionStorage.getItem("TSP");
+                let t3 = sessionStorage.getItem("SL");
+                let t4 = sessionStorage.getItem("Gia");
+
+                // document.getElementById("T1").innerHTML = t1;
+                // document.getElementById("T2").innerHTML = t2;
+                // document.getElementById("T3").innerHTML = t3;
+                // document.getElementById("T4").innerHTML = t4;
+
+                document.getElementById("Tong").innerHTML = t3;
+                document.getElementById("Tien").innerHTML = t4*t3;
+            } else {
+                document.getElementById("check").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+
+        }
+    </script>
+
+    <div>
+
+        <table>
+            <tr>
+                <td>Mã sản phẩm</td>
+                <td><input id="MSP"></td>
+            </tr>
+            <tr>
+                <td>Tên sản phẩm</td>
+                <td><input id="TSP"></td>
+            </tr>
+            <tr>
+                <td>Số lượng</td>
+                <td><input id="SL"></td>
+            </tr>
+            <tr>
+                <td>Giá</td>
+                <td><input id="Gia"></td>
+            </tr>
+            <td></td>
+            <td><button onclick="clickSubmit()">
+                    Thêm giỏ hàng
+                </button></td>
+        </table>
+
+    </div>
+    <div id="check">
+        <p>Tổng sản phẩm <strong id="Tong"></strong></p>
+        <p>Tổng tiền <strong id="Tien"></strong></p>
+    </div>
+
+</body>
+
+</html>
