@@ -1,0 +1,48 @@
+.header-footer {
+    width: 100%;
+    text-align: center;
+    background-color: #43d1af;
+    
+}
+#card {
+    width: 20%;
+    background-color: #f7f7f7;
+}
+
+#card input {
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 3%;
+}
+
+#card textarea {
+    width: 80%;
+    padding: 3%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+h1 {
+    color: white;
+    padding: 5%;
+}
+
+h3 {
+    color: white;
+    padding: 3%;
+}
+
+#content{
+    padding: 5%;
+}
+
+#send{
+    text-align: center;
+    width: 85%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #43d1af;
+}
