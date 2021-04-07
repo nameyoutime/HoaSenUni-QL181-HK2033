@@ -1,0 +1,46 @@
+body{
+    height: auto;
+    margin: 0;
+}
+
+#select-1 ul {
+    list-style-type: none;
+    
+}
+
+#content{
+    display: flex;
+   
+}
+
+#select-1{
+    padding: 1%;
+    width: 10%;
+    height: 20vh;
+    background-color: #bbd2df;
+}
+#select-2{
+    /* padding: %;? */
+    padding-left: 1%;
+    width: 90%;
+    background-color: #f0f0f0;
+
+}
+
+#header{
+    border:RGB(103, 155, 183)  solid;
+    background-color: RGB(103, 155, 183);
+}
+
+#footer{
+    border:RGB(103, 155, 183)  solid;
+    background-color: RGB(103, 155, 183);
+}
+
+#footer p{
+    text-align: center;
+}
+/* #select-2 a{
+    padding: 1%;
+
+} */
