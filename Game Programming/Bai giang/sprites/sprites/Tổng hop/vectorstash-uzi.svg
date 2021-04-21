@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="2979.9211"
+   height="2104.7244"
+   id="svg3860">
+  <title
+     id="title3906">vectorstash-uzi</title>
+  <defs
+     id="defs3862">
+    <linearGradient
+       x1="369.8653"
+       y1="172.62036"
+       x2="370.64737"
+       y2="184.28786"
+       id="linearGradient3298"
+       xlink:href="#linearGradient10412"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-152.74417,1.4908636)" />
+    <linearGradient
+       id="linearGradient10412">
+      <stop
+         id="stop10414"
+         style="stop-color:#4d4d4d;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop10416"
+         style="stop-color:#151515;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="393.69858"
+       y1="180.4147"
+       x2="392.80844"
+       y2="168.03899"
+       id="linearGradient3300"
+       xlink:href="#linearGradient10420"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-152.73169,1.4909964)" />
+    <linearGradient
+       id="linearGradient10420">
+      <stop
+         id="stop10422"
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop10424"
+         style="stop-color:#8e8e8e;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+  </defs>
+  <metadata
+     id="metadata3866">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>vectorstash-uzi</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Vectorstash</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>uzi weapon sprite</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,1360.6299)"
+     id="layer1">
+    <g
+       transform="matrix(16.545372,0,0,16.545372,-1284.1731,-3770.6223)"
+       id="g15164">
+      <rect
+         width="116.60448"
+         height="27.403208"
+         x="85.724541"
+         y="165.50504"
+         transform="matrix(1,0,-0.00421628,0.99999111,0,0)"
+         id="rect10248"
+         style="fill:#333333;fill-opacity:1;stroke:#000000;stroke-width:1.1491971;stroke-opacity:1;display:inline" />
+      <rect
+         width="24.860544"
+         height="16.641407"
+         x="203.57904"
+         y="170.56209"
+         transform="matrix(1,0,-0.00642512,0.99997936,0,0)"
+         id="rect10250"
+         style="fill:url(#linearGradient3298);fill-opacity:1;stroke:#000000;stroke-width:0.55697846;stroke-opacity:1;display:inline" />
+      <path
+         d="m 142.46333,192.89646 c 0,0 -3.44624,11.8566 -3.62482,11.14231 -13.13198,3.53554 -9.75313,1.9691 -9.75313,1.9691 l 1.6798,3.73205 c 0,0 3.89115,-2.35756 8.86159,-3.89004 1.49382,-3.30698 6.25481,-12.80286 6.25481,-12.80286 z"
+         id="path10252"
+         style="fill:#333333;fill-opacity:1;stroke:#000000;stroke-opacity:1;display:inline" />
+      <path
+         d="m 109.33468,192.39139 -0.81109,41.53741 c 22.68219,0.52267 11.48519,0.0436 23.03788,0.41673 l -1.41223,-41.44907 z"
+         id="path10256"
+         style="fill:#4d4d4d;fill-opacity:1;stroke:#000000;stroke-opacity:1;display:inline" />
+      <path
+         d="m 122.24625,169.32265 -3.39286,10 2.14286,0 3.39286,-9.82143"
+         id="path10258"
+         style="fill:#333333;fill-opacity:1;stroke:none;display:inline" />
+      <rect
+         width="25.046888"
+         height="7.2830648"
+         x="230.16673"
+         y="175.25864"
+         transform="matrix(1,0,-0.01479109,0.99989061,0,0)"
+         id="rect10250-6"
+         style="fill:url(#linearGradient3300);fill-opacity:1;stroke:#000000;stroke-width:0.36984694;stroke-opacity:1;display:inline" />
+      <rect
+         width="13.735895"
+         height="16.782381"
+         x="113.82401"
+         y="234.7822"
+         transform="matrix(1,0,-0.00352017,0.9999938,0,0)"
+         id="rect10250-5"
+         style="fill:#333333;fill-opacity:1;stroke:#000000;stroke-width:0.41576061;stroke-opacity:1;display:inline" />
+      <path
+         d="m 294.15642,111.27528 a 13.611806,14.318913 0 1 1 -27.22361,0 l 13.61181,0 z"
+         transform="matrix(-1,0,0,-1,379.69766,276.19053)"
+         id="path10352"
+         style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-opacity:1;display:inline" />
+      <path
+         d="m 294.15642,111.27528 a 13.611806,14.318913 0 1 1 -27.22361,0 l 13.61181,0 z"
+         transform="matrix(-0.62163516,0,0,-0.77446686,367.41787,250.98217)"
+         id="path10352-0"
+         style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-opacity:1;display:inline" />
+      <rect
+         width="59.057125"
+         height="6.6232409"
+         rx="7.8055506"
+         x="88.942757"
+         y="170.46016"
+         id="rect10390"
+         style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-width:1.24064565;stroke-opacity:1;display:inline" />
+      <rect
+         width="59.057125"
+         height="6.6232409"
+         rx="7.8055506"
+         x="88.666756"
+         y="180.74364"
+         id="rect10390-7"
+         style="fill:#666666;fill-opacity:1;stroke:#000000;stroke-width:1.24064565;stroke-opacity:1;display:inline" />
+      <path
+         d="m 166.74625,165.09742 7.5,-9 0.5,9"
+         id="path13858"
+         style="fill:#4d4d4d;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline" />
+    </g>
+  </g>
+</svg>
