@@ -12,8 +12,8 @@ public class controller : MonoBehaviour
     float horizontalMove = 0f, horizontalInput = 0f;
     float direction;
     [SerializeField] private float m_JumpForce = 8f;
-    [SerializeField]
-    private GameObject bullet;
+    [SerializeField] private GameObject bullet;
+
 
     Object bulletref;
     // Start is called before the first frame update
@@ -65,7 +65,7 @@ public class controller : MonoBehaviour
     }
     void FixedUpdate()
     {
-        character.Move(horizontalMove * Time.fixedDeltaTime,horizontalInput);
+        character.Move(horizontalMove * Time.fixedDeltaTime, horizontalInput);
     }
 
     public void OnLanding()

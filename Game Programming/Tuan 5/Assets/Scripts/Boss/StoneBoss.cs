@@ -6,19 +6,17 @@ public class StoneBoss : MonoBehaviour
 {
     [SerializeField]
     public float movespeed = 1f;
-    private Vector3 startPos, endPos;
-    private Vector3 nextPos;
-    [SerializeField]
-    private Transform PosB;
+    public int direction = 0;
+    // private Vector3 startPos, endPos;
+    // private Vector3 nextPos;
+    // [SerializeField]
+    // private Transform PosB;
 
 
     private Animator anim;
-    [SerializeField]
-    // Use this for initialization
-    private float TimeAttack = 0;
+    [SerializeField] private float TimeAttack = 0;
     private bool normalAttack = true;
-    [SerializeField]
-    private GameObject zoombie;
+    [SerializeField] private GameObject zoombie;
     void Awake()
     {
 
@@ -26,30 +24,33 @@ public class StoneBoss : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        startPos = transform.localPosition;
-        endPos = PosB.localPosition;
-        nextPos = endPos;
+        direction = -1;
+        // startPos = transform.localPosition;
+        // endPos = PosB.localPosition;
+        // nextPos = endPos;
+
+
 
         StartCoroutine(Spawner());
     }
     void Running()
     {
         anim.SetTrigger("Move");
-        transform.localPosition = Vector3.MoveTowards(transform.localPosition, nextPos, movespeed *
-        Time.deltaTime);
+        // transform.localPosition = Vector3.MoveTowards(transform.localPosition, nextPos, movespeed *
+        // Time.deltaTime);
+        Vector3 pos = this.transform.position;
+        pos.x += direction * movespeed * Time.deltaTime;
+        transform.position = pos;
 
-        if (Vector3.Distance(transform.localPosition, nextPos) <= 2)
-        {
-            ChangeDirection();
-            Vector3 temp = transform.localScale;
-            temp.x *= -1;
-            transform.localScale = temp;
-        }
+        // if (Vector3.Distance(transform.localPosition, nextPos) <= 2)
+        // {
+
+        // }
 
     }
     void ChangeDirection()
     {
-        nextPos = nextPos != startPos ? startPos : endPos;
+        direction = -direction;
     }
     void CheckAttack()
     {
@@ -82,5 +83,20 @@ public class StoneBoss : MonoBehaviour
         pos.x -= transform.localScale.x;
         Instantiate(zoombie, pos, transform.rotation);
         StartCoroutine(Spawner());
+    }
+
+    // called when the cube hits the floor
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        //Check for a match with the specific tag on any GameObject that collides with your GameObject
+        if (col.gameObject.tag == "bound")
+        {
+            ChangeDirection();
+            Vector3 temp = transform.localScale;
+            temp.x *= -1;
+            transform.localScale = temp;
+            //If the GameObject has the same tag as specified, output this message in the console
+            // Debug.Log("Do something else here");
+        }
     }
 }

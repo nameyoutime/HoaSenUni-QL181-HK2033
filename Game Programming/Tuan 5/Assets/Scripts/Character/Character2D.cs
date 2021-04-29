@@ -41,7 +41,8 @@ public class Character2D : MonoBehaviour
             MovingBackground.left = true;
             MovingBackground.right = false;
         }
-        else if (input <0){
+        else if (input < 0)
+        {
             MovingBackground.right = true;
             MovingBackground.left = false;
         }
