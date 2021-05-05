@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-e4710": {
+      "hosting": {
+        "firebase": [
+          "fir-e4710"
+        ]
+      }
+    }
+  }
+}
