@@ -1,25 +1,21 @@
 import { Component } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { Item } from './models/Item-model';
 
 @Component({
   selector: 'app-root',
-  template: `
-  <ul>
-    <li *ngFor="let item of items | async">
-    {{ item.name }}
-    </li>
-  </ul>
-  `
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'firebase';
-
+  items: Observable<Item[]>;
   private itemsCollection: AngularFirestoreCollection<any>;
-  items: Observable<any[]>;
+  
   //  items: Item[]=[];
   constructor(private readonly afs: AngularFirestore) {
-    this.itemsCollection = afs.collection<any>('items');
+    this.itemsCollection = afs.collection<Item>('items');
     //this.items = this.itemsCollection.valueChanges();
 
     // .valueChanges() is simple. It just returns the 
