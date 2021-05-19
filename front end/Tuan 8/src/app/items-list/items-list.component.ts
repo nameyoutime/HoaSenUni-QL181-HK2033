@@ -16,13 +16,13 @@ export class ItemsListComponent implements OnInit {
   currentPage: number = 1;
   itemsPerPage: number = 5;
   data: any;
-  items = this.fireSer.items;
+  items = this.fire.items;
   ngOnInit(): void {
     
   }
 
 
-  constructor(private toast: ToastrService, public fireSer: FirebaseService,private itemSer:ItemsService, private modalService: NgbModal, private fire: FirebaseService) {
+  constructor(private toast: ToastrService, private modalService: NgbModal, private fire: FirebaseService) {
     
 
   }
