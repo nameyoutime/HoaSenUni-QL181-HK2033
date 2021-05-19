@@ -5,6 +5,7 @@ import { Item } from '../models/Item-model';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FirebaseService } from '../services/firebase.service';
 import { ToastrService } from 'ngx-toastr';
+import { ItemsService } from '../services/items.service';
 @Component({
   selector: 'app-items-list',
   templateUrl: './items-list.component.html',
@@ -12,21 +13,24 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class ItemsListComponent implements OnInit {
   // showModal:boolean;
-
-
-  ngOnInit(): void {
-  }
+  currentPage: number = 1;
+  itemsPerPage: number = 5;
   data: any;
-  items: Observable<Item[]>;
-  private itemsCollection: AngularFirestoreCollection<Item>;
+  items = this.fireSer.items;
+  ngOnInit(): void {
+    
+  }
 
-  constructor(private toast: ToastrService, private afs: AngularFirestore, private modalService: NgbModal, private fire: FirebaseService) {
-    this.itemsCollection = this.afs.collection<Item>('items');
-    this.items = this.itemsCollection.valueChanges();
 
+  constructor(private toast: ToastrService, public fireSer: FirebaseService,private itemSer:ItemsService, private modalService: NgbModal, private fire: FirebaseService) {
+    
 
   }
 
+
+  test() {
+    // console.log(this.isEmpty);
+  }
   open(item: Item) {
     // console.log(item);
     const modalRef = this.modalService.open(NgbdModalContent);
@@ -34,17 +38,23 @@ export class ItemsListComponent implements OnInit {
       name: "Update form",
       item: item
     }
+    modalRef.result.then(() => {
+      // console.log('When user closes');
+      // this.checkEmpty(this.itemsData);
+    }, () => {
+      // console.log('Backdrop click');
+    })
+
   }
   del(id) {
     try {
       this.fire.deleteItem(id);
+      // this.checkEmpty(this.itemsData);
       this.toast.success("Susscess delete item!");
     } catch (error) {
       this.toast.error("Can't delete item!");
     }
-
   }
-
 }
 
 

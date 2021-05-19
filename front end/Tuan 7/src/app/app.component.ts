@@ -55,7 +55,8 @@ export class NgbdModalContent {
     let sub = this.subtitleInput.nativeElement.value;
     let data: Item = {
       name: name,
-      subtitle: sub
+      subtitle: sub,
+      dateCreated: Date.now()
     }
     if (name == "" || sub == "") {
       this.toastService.error("Name or subtitile is empty!", "error");
