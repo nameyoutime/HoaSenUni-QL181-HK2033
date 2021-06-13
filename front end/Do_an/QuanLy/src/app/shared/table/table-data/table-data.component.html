@@ -1,0 +1,91 @@
+<h1 class="mt-4"></h1>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table mr-1"></i>
+        Data Table
+    </div>
+    <!-- <div *ngIf="this.fireSer.isEmpty">
+        <h4>Table is empty!</h4>
+    </div> -->
+    <!-- <div *ngIf="!this.fireSer.isEmpty" class="card-body"> -->
+    <div class="card-body">
+        <!-- <div class="container-fluid text-center" style="margin:1%;">
+            <button type="button" class="btn btn-primary btn-sm px-3" (click)="openCreateDialog()">
+                Create
+            </button>
+        </div> -->
+        <div>
+            <label>Filter</label>
+            <ng-select class=" w-25" [(ngModel)]="selectedTag" (change)="check(selectedTag)">
+                
+                <ng-option *ngFor="let tag of tags" [value]="tag.id">{{tag.name}}</ng-option>
+            </ng-select>
+        </div>
+        <!--Using items input-->
+
+        <div class="table-responsive">
+            <table class="table table-bordered " id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Note</th>
+                        <th>Price</th>
+                        <th>Quanlity</th>
+                        <th>Tag</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Note</th>
+                        <th>Price</th>
+                        <th>Quanlity</th>
+                        <th>Tag</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+                <tbody
+                    *ngFor="let item of collection| paginate: { itemsPerPage: numberOfItem, currentPage: p }; let i = index">
+                    <tr>
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{item.title}}</td>
+                        <td>{{item.note}}</td>
+                        <td>{{item.price}}VNĐ</td>
+                        <td>{{item.quanlity}}</td>
+                        <table class="table table-borderless">
+                            <tr>
+                                <td *ngFor="let tag of item.tag">
+                                    {{tag.name}}
+                                </td>
+                            </tr>
+                        </table>
+
+                        <td>
+                            <button (click)="openUpdateDialog()" type="button" class="btn btn-primary btn-sm px-3"
+                                style="margin-right: 3px;">
+                                <i class="fas fa-highlighter"></i>
+                            </button>
+                            <button (click)="deleteItem()" type="button" class="btn btn-danger btn-sm px-3">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+                    <!-- <tr
+                        *ngFor="let item of items|async| paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage };let i = index">
+                        <td>{{i+1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.subtitle}}</td>
+                        <td>
+                            <button class="btn btn-outline-primary" style="margin-right: 1%;"
+                                (click)="open(item)">Update</button>
+                            <button class="btn btn-outline-primary" (click)="del(item.id)">Delete</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>

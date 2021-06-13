@@ -1,0 +1,60 @@
+<!-- <form [formGroup]="insertFrm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label for="title">Item title</label>
+        <input type="text" class="form-control" from aria-describedby="UserNameHelp" placeholder="Enter title"
+            formControlName="title">
+        <div *ngIf="insertFrm.get('title').touched==false && insertFrm.get('title').invalid==true">Invalid</div>
+        <input type="text" class="form-control" from aria-describedby="UserNameHelp" placeholder="Enter note"
+            formControlName="note">
+            <div *ngIf="insertFrm.get('note').touched==false && insertFrm.get('note').invalid==true">Invalid</div>
+
+        <button type="submit"></button>
+
+    </div>
+</form> -->
+
+<div class="container">
+    <form id="contact" [formGroup]="insertFrm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <h3>Colorlib Contact Form</h3>
+            <h4>Contact us for custom quote</h4>
+            <fieldset>
+                <input placeholder="Enter title" type="text" formControlName="title">
+            </fieldset>
+            <fieldset>
+                <input placeholder="Enter note" type="text" formControlName="note">
+            </fieldset>
+            <fieldset>
+                <input placeholder="Enter price" type="number" formControlName="price">
+            </fieldset>
+            <fieldset>
+                <input placeholder="Enter quanlity" type="number" formControlName="quanlity">
+            </fieldset>
+            <fieldset style="display: flex;">
+
+                <ng-select class=" w-25" [(ngModel)]="selectedTag" (change)="check(selectedTag)" formControlName="tag">
+
+                    <ng-option *ngFor="let tag of tags" [value]="tag.id">{{tag.name}}</ng-option>
+                </ng-select>
+                <button (click)="add()">add</button>
+            </fieldset>
+            <div *ngFor="let item of addTag;let i = index" style="display: flex;">
+                <h5>{{item.name}}</h5>
+                
+                <button (click)="remove(i)" >x</button>
+            </div>
+
+            <!-- <fieldset>
+                <textarea placeholder="Type your message here...." ></textarea>
+            </fieldset> -->
+            <fieldset>
+                <button class="btn btn-primary" name="submit" type="submit" id="contact-submit"
+                    data-submit="...Sending">Submit</button>
+            </fieldset>
+        </div>
+        <!-- <p class="copyright">Designed by <a href="https://colorlib.com" target="_blank" title="Colorlib">Colorlib</a>
+        </p> -->
+    </form>
+    <button (click)="test()"></button>
+</div>
