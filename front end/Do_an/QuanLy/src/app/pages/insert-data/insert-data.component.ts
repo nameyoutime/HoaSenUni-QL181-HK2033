@@ -51,26 +51,22 @@ export class InsertDataComponent implements OnInit {
 
   check(val) {
     this.val = val;
-    // let temp = this.tableSer.getTagById
-    // this.addTag.push(val)
-    // console.log()
   }
 
+
+  //broken need fix but too lazi
   add() {
     let temp = this.tableSer.getTagById(this.val);
-    // console.log(temp);
 
     this.addTag.push(temp);
-    var n = this.addTag.includes(temp.id);
+    // var n = this.addTag.includes(temp.id);
     // console.log(n);
   }
 
   remove(index) {
     let temp = this.addTag.slice();
-
     temp.splice(index, 1);
     this.addTag = temp;
-    // this.addTag.split(0,index);
   }
   test() {
     console.log(this.addTag)

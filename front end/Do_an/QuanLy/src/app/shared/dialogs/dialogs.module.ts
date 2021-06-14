@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CreateDialogComponent } from './create-dialog/create-dialog.component'
 import { UpdateDialogComponent } from './update-dialog/update-dialog.component';
-
+import { MaterialModule } from '../material/material.module';
+import { TagDialogComponent } from './tag-dialog/tag-dialog.component'
 
 @NgModule({
-  declarations: [CreateDialogComponent, UpdateDialogComponent],
+  declarations: [UpdateDialogComponent, TagDialogComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule,
   ],
-  exports:[CreateDialogComponent,UpdateDialogComponent]
+  exports: [UpdateDialogComponent,TagDialogComponent]
 })
 export class DialogsModule { }
