@@ -10,6 +10,6 @@ import { TagDialogComponent } from './tag-dialog/tag-dialog.component'
     CommonModule,
     MaterialModule,
   ],
-  exports: [UpdateDialogComponent,TagDialogComponent]
+  exports: []
 })
 export class DialogsModule { }

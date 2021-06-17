@@ -7,9 +7,6 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
-
-
-
 import { ComponentsModule } from './components/components.module'
 import { MaterialModule } from './shared/material/material.module';
 @NgModule({
